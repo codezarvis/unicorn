@@ -1,10 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.devops</groupId>
 	<artifactId>unicorn</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>unicorn Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	
@@ -12,7 +11,7 @@
 		<connection>scm:git:https://github.com/codezarvis/unicorn.git</connection>
 		<url>https://github.com/codezarvis/unicorn.git</url>
 		<developerConnection>scm:git:https://github.com/codezarvis/unicorn.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>{project.version}</tag>
 	</scm>
 	
 	
@@ -43,7 +42,7 @@
                                
                 <plugin>
                     <artifactId>maven-release-plugin</artifactId>
-                    <version>2.5.1</version>
+                    <version>2.5.3</version>
                     <configuration>
                         <tagNameFormat>{project.version}</tagNameFormat>
                         <autoVersionSubmodules>true</autoVersionSubmodules>
