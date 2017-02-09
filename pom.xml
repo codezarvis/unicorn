@@ -3,7 +3,7 @@
 	<groupId>com.devops</groupId>
 	<artifactId>unicorn</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>unicorn Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	
