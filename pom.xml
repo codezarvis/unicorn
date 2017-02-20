@@ -1,19 +1,19 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.devops</groupId>
 	<artifactId>unicorn</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>unicorn Maven Webapp</name>
 	<url>http://maven.apache.org</url>
-	
+
 	<scm>
-		<connection>scm:git:https://github.com/codezarvis/unicorn.git</connection>
-		<url>https://github.com/codezarvis/unicorn.git</url>
-		<developerConnection>scm:git:https://github.com/codezarvis/unicorn.git</developerConnection>
-		<tag>unicorn-0.0.1</tag>
+		<connection>scm:git:git@github.com:codezarvis/unicorn.git</connection>
+		<url>scm:git:git@github.com:codezarvis/unicorn.git</url>
+		<developerConnection>scm:git:git@github.com:codezarvis/unicorn.git</developerConnection>
+		<tag>HEAD</tag>
 	</scm>
-	
 	
 	
 	<distributionManagement>
@@ -35,73 +35,27 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
 	<build>
-		<finalName>unicorn</finalName>
 		<pluginManagement>
-            <plugins>
-                               
-                <plugin>
-                    <artifactId>maven-release-plugin</artifactId>
-                    <version>2.5.3</version>
-                    <configuration>
-                        <autoVersionSubmodules>true</autoVersionSubmodules>
-                        <!-- do not release profile from Maven super pom -->
-                        <useReleaseProfile>false</useReleaseProfile>
-                        <!--  instead use our own one called release, see below -->
-                        <releaseProfiles>release</releaseProfiles>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>2.10.1</version>
-                    <configuration>
-                        <show>private</show>
-                        <nohelp>true</nohelp>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-source-plugin</artifactId>
-                    <version>2.4</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-     
-    </build>
-    <profiles>
-        <profile>
-            <id>release</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>attach-javadocs</id>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>attach-sources</id>
-                                <goals>
-                                    <goal>jar-no-fork</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
-		
-		
-		
+			<plugins>
+				<plugin>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.5.2</version>
+					<executions>
+						<execution>
+							<id>default</id>
+							<goals>
+								<goal>perform</goal>
+							</goals>
+							<configuration>
+								<pomFileName>${project.name}/pom.xml</pomFileName>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
 </project>
