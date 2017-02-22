@@ -51,6 +51,7 @@
 							</goals>
 							<configuration>
 								<pomFileName>${project.name}/pom.xml</pomFileName>
+								<useReleaseProfile>false</useReleaseProfile>
 								<releaseProfiles>release</releaseProfiles>
 							</configuration>
 						</execution>
