@@ -7,15 +7,15 @@
 	<name>unicorn Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
-	<scm>
+	<!--<scm>
 		<connection>scm:git:git@github.com:codezarvis/unicorn.git</connection>
 		<url>scm:git:git@github.com:codezarvis/unicorn.git</url>
 		<developerConnection>scm:git:git@github.com:codezarvis/unicorn.git</developerConnection>
 		<tag>HEAD</tag>
-	</scm>
+	</scm>->
 
 
-	<distributionManagement>
+	<!--<distributionManagement>
 		<repository>
 			<id>qedgenexus</id>
 			<url>http://localhost:8080/nexus/content/repositories/releases</url>
@@ -24,7 +24,7 @@
 			<id>qedgenexus</id>
 			<url>http://localhost:8080/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
-	</distributionManagement>
+	</distributionManagement>-->
 
 	<dependencies>
 
@@ -40,7 +40,7 @@
 	<build>
 
 		<plugins>
-			<plugin>
+			<!--<plugin>
 				<artifactId>maven-deploy-plugin</artifactId>
 				<version>2.6</version>
 			</plugin>
@@ -58,7 +58,7 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin>-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
@@ -104,6 +104,8 @@
 		</plugins>
 
 	</build>
+
+	<!-- -->
 
 
 </project>
