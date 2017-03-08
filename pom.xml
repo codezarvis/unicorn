@@ -7,15 +7,8 @@
 	<name>unicorn Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
-	<!--<scm>
-		<connection>scm:git:git@github.com:codezarvis/unicorn.git</connection>
-		<url>scm:git:git@github.com:codezarvis/unicorn.git</url>
-		<developerConnection>scm:git:git@github.com:codezarvis/unicorn.git</developerConnection>
-		<tag>HEAD</tag>
-	</scm>->
-
-
-	<!--<distributionManagement>
+	
+	<distributionManagement>
 		<repository>
 			<id>qedgenexus</id>
 			<url>http://localhost:8080/nexus/content/repositories/releases</url>
@@ -24,10 +17,9 @@
 			<id>qedgenexus</id>
 			<url>http://localhost:8080/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
-	</distributionManagement>-->
+	</distributionManagement>
 
 	<dependencies>
-
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -40,38 +32,7 @@
 	<build>
 
 		<plugins>
-			<!--<plugin>
-				<artifactId>maven-deploy-plugin</artifactId>
-				<version>2.6</version>
-			</plugin>
-			<plugin>
-				<artifactId>maven-release-plugin</artifactId>
-				<version>2.5.2</version>
-				<executions>
-					<execution>
-						<id>default</id>
-						<goals>
-							<goal>perform</goal>
-						</goals>
-						<configuration>
-							<pomFileName>${project.name}/pom.xml</pomFileName>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>-->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.10.4</version>
-				<executions>
-					<execution>
-						<id>attach-javadocs</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+			
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<version>3.0.0</version>
@@ -105,7 +66,7 @@
 
 	</build>
 
-	<!-- -->
+
 
 
 </project>
